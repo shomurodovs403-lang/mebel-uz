@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mebelluz | Hashamatli va Zamonaviy Mebellar Do'koni</title>
+    <meta name="description"
+        content="WoodCraft - O'zbekistondagi eng sifatli, tabiiy yog'ochdan yasalgan zamonaviy va prumium mebellar to'plami. Bepul yetkazib berish va rasmiy kafolat.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="c:\Users\AliCom\Desktop\mebel uz\6874c1e33564d.webp" crossorigin>0 
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <div class="announcement-text">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>5,000,000 UZS dan yuqori buyurtmalar uchun <strong>BEPUL yetkazib berish!</strong></span>
+            </div>
+            <div class="announcement-right">
+                <div class="currency-selector-wrapper">
+                    <i class="fa-solid fa-coins"></i>
+                    <select id="currencySelector" aria-label="Valyutani tanlang">
+                        <option value="UZS">UZS (so'm)</option>
+                        <option value="USD">USD ($)</option>
+                    </select>
+                </div>
+                <a href="tel:+998901234567" class="phone-link"><i class="fa-solid fa-phone"></i> +998 (90) 123-45-67</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header / Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-logo">
+                <div class="logo-icon"><i class="fa-solid fa-couch"></i></div>
+                <div class="logo-text">
+                    <span class="logo-main">WoodCraft</span>
+                    <span class="logo-sub">LUXURY FURNITURE</span>
+                </div>
+            </a>
+
+            <!-- Search Bar with Live Results -->
+            <div class="search-box-wrapper">
+                <div class="search-input-group">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Mebel nomi yoki toifasi bo'yicha qidiruv..."
+                        autocomplete="off">
+                    <button class="clear-search-btn" id="clearSearchBtn" aria-label="Tozalash"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="search-results-dropdown" id="searchResultsDropdown"></div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Bosh sahifa</a>
+                <a href="#catalog" class="nav-link">Katalog</a>
+                <a href="#bestsellers" class="nav-link">Ommabop</a>
+                <a href="#promotions" class="nav-link">Aksiyalar</a>
+                <a href="#about" class="nav-link">Biz haqimizda</a>
+            </nav>
+
+            <!-- Actions / Badges -->
+            <div class="nav-actions">
+                <button class="icon-btn" id="wishlistToggleBtn" title="Sevimlilar" aria-label="Sevimlilar">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="wishlistBadge">0</span>
+                </button>
+
+                <button class="icon-btn" id="ordersToggleBtn" title="Buyurtmalar tarixi"
+                    aria-label="Buyurtmalar tarixi">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+
+                <button class="icon-btn cart-btn-primary" id="cartToggleBtn" title="Savatcha" aria-label="Savatcha">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                    <span class="cart-total-preview" id="cartTotalPreview">0 UZS</span>
+                </button>
+
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Menyu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-slider" id="heroSlider">
+                <!-- Slide 1 -->
+                <div class="slide active"
+                    style="background-image: linear-gradient(180deg, rgba(44, 29, 17, 0.45) 0%, rgba(44, 29, 17, 0.75) 100%), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80');">
+                    <div class="container slide-content">
+                        <span class="hero-tag"><i class="fa-solid fa-sparkles"></i> 2026 Yangi To'plam</span>
+                        <h1 class="hero-title">Shinamlik va Oliy Sifat Birlashgan Makon</h1>
+                        <p class="hero-description">Tabiiy yog'och va premium velurdan tayyorlangan eksklyuziv mebellar
+                            to'plami bilan uyingizga yangicha nafas bag'ishlang.</p>
+                        <div class="hero-buttons">
+                            <a href="#catalog" class="btn btn-primary btn-lg"><i class="fa-solid fa-compass"></i>
+                                Katalogga o'tish</a>
+                            <a href="#promotions" class="btn btn-outline-light btn-lg"><i
+                                    class="fa-solid fa-percent"></i> Chegirmalar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide"
+                    style="background-image: linear-gradient(180deg, rgba(44, 29, 17, 0.45) 0%, rgba(44, 29, 17, 0.75) 100%), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1920&q=80');">
+                    <div class="container slide-content">
+                        <span class="hero-tag"><i class="fa-solid fa-fire"></i> Eng Ko'p Sotilganlar</span>
+                        <h1 class="hero-title">Minimalistik Skandinaviya Uslubi</h1>
+                        <p class="hero-description">Zamonaviy dizayn, qulaylik va mustahkamlik. Uyingizning har bir
+                            burchagi uchun maxsus loyihal ashtirilgan mebellar.</p>
+                        <div class="hero-buttons">
+                            <a href="#bestsellers" class="btn btn-primary btn-lg"><i class="fa-solid fa-star"></i>
+                                Ommabop modellarni ko'rish</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide"
+                    style="background-image: linear-gradient(180deg, rgba(44, 29, 17, 0.45) 0%, rgba(44, 29, 17, 0.75) 100%), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80');">
+                    <div class="container slide-content">
+                        <span class="hero-tag"><i class="fa-solid fa-tag"></i> Maxsus Aksiya -30%</span>
+                        <h1 class="hero-title">Oshxona va Mehmonxona Mebellari</h1>
+                        <p class="hero-description">Eman va Yong'oq yog'ochidan tayyorlangan stol-stullar to'plamiga 30%
+                            gacha chegirma e'lon qilindi!</p>
+                        <div class="hero-buttons">
+                            <a href="#catalog" class="btn btn-primary btn-lg"><i class="fa-solid fa-cart-shopping"></i>
+                                Hozir xarid qilish</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="slider-arrow prev-arrow" id="slidePrevBtn" aria-label="Oldingi"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow next-arrow" id="slideNextBtn" aria-label="Keyingi"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- Trust Features Grid -->
+        <section class="trust-features-section">
+            <div class="container grid-features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <div class="feature-info">
+                        <h4>Bepul Yetkazib Berish</h4>
+                        <p>5,000,000 so'mdan oshganda O'zbekiston bo'ylab bepul</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="feature-info">
+                        <h4>2 Yillik Kafolat</h4>
+                        <p>Barcha mahsulotlarimiz sifatiga 100% javob beramiz</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-tree"></i></div>
+                    <div class="feature-info">
+                        <h4>100% Tabiiy Yog'och</h4>
+                        <p>Ekolik toza Eman, Yong'oq va Qayin materiallari</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <div class="feature-info">
+                        <h4>Qulay To'lov Turlari</h4>
+                        <p>Naqd pul, Click, Payme va bo'lib to'lash imkoniyati</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bestsellers Spotlight Section -->
+        <section class="section bestsellers-section" id="bestsellers">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle"><i class="fa-solid fa-fire"></i> Xaridorbop Modellar</span>
+                        <h2 class="section-title">Eng Ko'p Sotilgan Mebellar</h2>
+                    </div>
+                    <a href="#catalog" class="link-with-arrow">Barchasini ko'rish <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="products-grid bestsellers-grid" id="bestsellersGrid">
+                    <!-- Dynamic rendering via app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Catalog Section with Sidebar & Grid -->
+        <section class="section catalog-section" id="catalog">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> Barcha Mahsulotlar</span>
+                        <h2 class="section-title">Bizning Mebellar Katalogi</h2>
+                    </div>
+                    <div class="active-filter-stats" id="activeFilterStats">
+                        Ko'rsatilmoqda: <strong id="productCountText">0 ta mahsulot</strong>
+                    </div>
+                </div>
+
+                <!-- Category Tabs Bar -->
+                <div class="category-tabs" id="categoryTabs">
+                    <button class="cat-tab active" data-category="all">
+                        <i class="fa-solid fa-border-all"></i> Barchasi
+                    </button>
+                    <button class="cat-tab" data-category="mehmonxona">
+                        <i class="fa-solid fa-couch"></i> Mehmonxona
+                    </button>
+                    <button class="cat-tab" data-category="yotoqxona">
+                        <i class="fa-solid fa-bed"></i> Yotoqxona
+                    </button>
+                    <button class="cat-tab" data-category="oshxona">
+                        <i class="fa-solid fa-utensils"></i> Oshxona
+                    </button>
+                    <button class="cat-tab" data-category="ofis">
+                        <i class="fa-solid fa-briefcase"></i> Ofis mebellari
+                    </button>
+                    <button class="cat-tab" data-category="yumshoq">
+                        <i class="fa-solid fa-chair"></i> Yumshoq mebellar
+                    </button>
+                </div>
+
+                <div class="catalog-layout">
+                    <!-- Sidebar Filters -->
+                    <aside class="catalog-sidebar">
+                        <div class="sidebar-header">
+                            <h3><i class="fa-solid fa-sliders"></i> Filtrlar</h3>
+                            <button class="reset-filters-btn" id="resetFiltersBtn"><i
+                                    class="fa-solid fa-rotate-left"></i> Tozalash</button>
+                        </div>
+
+                        <!-- Price Range Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">Narx oralig'i</h4>
+                            <div class="price-slider-wrapper">
+                                <div class="price-values">
+                                    <span id="priceMinDisplay">0 UZS</span>
+                                    <span>-</span>
+                                    <span id="priceMaxDisplay">20 000 000 UZS</span>
+                                </div>
+                                <input type="range" id="priceRangeSlider" min="0" max="25000000" step="500000"
+                                    value="25000000">
+                            </div>
+                        </div>
+
+                        <!-- Material Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">Material turi</h4>
+                            <div class="checkbox-list" id="materialFilterList">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" value="Eman" class="material-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Eman (Oak)</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" value="Yong'oq" class="material-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Yong'oq (Walnut)</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" value="MDF" class="material-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>MDF Premium</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" value="Teri" class="material-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Tabiiy Teri</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" value="Velur" class="material-checkbox">
+                                    <span class="checkmark"></span>
+                                    <span>Yumshoq Velur</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Stock Toggle Filter -->
+                        <div class="filter-group">
+                            <label class="toggle-switch-label">
+                                <span>Faqat sotuvda mavjudlari</span>
+                                <input type="checkbox" id="inStockToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </aside>
+
+                    <!-- Catalog Right Side (Sort + Grid) -->
+                    <div class="catalog-main">
+                        <!-- Toolbar (Sorting & Mobile Filter Toggle) -->
+                        <div class="catalog-toolbar">
+                            <button class="btn btn-outline mobile-filter-btn" id="mobileFilterBtn">
+                                <i class="fa-solid fa-sliders"></i> Filtrlar
+                            </button>
+                            <div class="sort-wrapper">
+                                <label for="sortSelect"><i class="fa-solid fa-arrow-down-wide-short"></i>
+                                    Saralash:</label>
+                                <select id="sortSelect">
+                                    <option value="popular">Eng ko'p sotilganlar</option>
+                                    <option value="price-asc">Narx: Arzonroqdan qimmatroqqa</option>
+                                    <option value="price-desc">Narx: Qimmatroqdan arzonroqqa</option>
+                                    <option value="rating">Reytingi bo'yicha</option>
+                                    <option value="newest">Yangi kelganlar</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Active Filter Pills -->
+                        <div class="active-pills-container" id="activePillsContainer"></div>
+
+                        <!-- Products Grid -->
+                        <div class="products-grid" id="mainProductsGrid">
+                            <!-- Dynamic rendering via app.js -->
+                        </div>
+
+                        <!-- Empty State -->
+                        <div class="empty-state hidden" id="noProductsEmptyState">
+                            <div class="empty-icon"><i class="fa-solid fa-couch"></i></div>
+                            <h3>Mahsulot topilmadi</h3>
+                            <p>Tanlangan filtrlar bo'yicha hech qanday mebel topilmadi. Filtr shartlarini o'zgartirib
+                                ko'ring.</p>
+                            <button class="btn btn-primary"
+                                onclick="document.getElementById('resetFiltersBtn').click()">Filtrlarni
+                                tozalash</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Discount Banner Section -->
+        <section class="promo-banner-section" id="promotions">
+            <div class="container">
+                <div class="promo-banner-card">
+                    <div class="promo-content">
+                        <span class="promo-tag"><i class="fa-solid fa-gift"></i> Eksklyuziv Taklif</span>
+                        <h2>MEBEL10 Promokodi Bilan 10% Chegirma!</h2>
+                        <p>Dastlabki haridingiz uchun maxsus sovga. Savatchadagi promokod oynasiga
+                            <strong>MEBEL10</strong> kodingizni kiriting va chegirmaga ega bo'ling.</p>
+                        <button class="btn btn-light copy-promo-btn" id="copyPromoBtn" data-code="MEBEL10">
+                            <i class="fa-regular fa-copy"></i> Promokodni nusxalash (MEBEL10)
+                        </button>
+                    </div>
+                    <div class="promo-image-holder">
+                        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80"
+                            alt="Mebel aksiya">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us / Why Choose Us -->
+        <section class="section about-section" id="about">
+            <div class="container grid-about">
+                <div class="about-image-grid">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+                        alt="WoodCraft mebel ustaxonasi" class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=600&q=80"
+                        alt="Yog'och mahsuloti" class="about-img-sub">
+                </div>
+                <div class="about-text-content">
+                    <span class="section-subtitle"><i class="fa-solid fa-gem"></i> Biz Haqimizda</span>
+                    <h2 class="section-title">WoodCraft — Uyingiz Qalbida Sifat va Go'zallik</h2>
+                    <p>Biz 2018-yildan buyon O'zbekiston bo'ylab oliy navli tabiiy yog'ochlardan (Eman, Yong'oq, Qayin)
+                        zamonaviy va uzoq yillar xizmat qiluvchi mebellarni ishlab chiqaramiz.</p>
+
+                    <ul class="about-features-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Har bir detalga alohida e'tibor va individual
+                            dizayn</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Yevropa standartlariga javob beruvchi ekologik
+                            xavfsiz lak va bo'yoqlar</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Bepul o'lchash va uyingizgacha yetkazib o'rnatib
+                            berish xizmati</li>
+                    </ul>
+
+                    <div class="about-stats-row">
+                        <div class="stat-item">
+                            <span class="stat-num">8,500+</span>
+                            <span class="stat-desc">Mamnun mijozlar</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">120+</span>
+                            <span class="stat-desc">Noyob dizaynlar</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">8 yil</span>
+                            <span class="stat-desc">Bozordagi tajriba</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col brand-col">
+                <a href="#" class="brand-logo footer-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-couch"></i></div>
+                    <div class="logo-text">
+                        <span class="logo-main">WoodCraft</span>
+                        <span class="logo-sub">LUXURY FURNITURE</span>
+                    </div>
+                </a>
+                <p>WoodCraft — Bu shunchaki mebel emas, bu sizning uyingizdagi qulaylik va estetika timsolidir.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Tezkor Havolalar</h4>
+                <ul>
+                    <li><a href="#hero">Bosh sahifa</a></li>
+                    <li><a href="#catalog">Katalog</a></li>
+                    <li><a href="#bestsellers">Eng ko'p sotilganlar</a></li>
+                    <li><a href="#promotions">Aksiyalar va Chegirmalar</a></li>
+                    <li><a href="#about">Biz haqimizda</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Mebel Toifalari</h4>
+                <ul>
+                    <li><a href="#catalog">Mehmonxona Mebellari</a></li>
+                    <li><a href="#catalog">Yotoqxona To'plamlari</a></li>
+                    <li><a href="#catalog">Oshxona Stollari</a></li>
+                    <li><a href="#catalog">Ofis Va Ish Stoli</a></li>
+                    <li><a href="#catalog">Yumshoq Divanlar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter-col">
+                <h4>Bizga Obuna Bo'ling</h4>
+                <p>Yangi to'plamlar va maxsus chegirmalardan birinchilardan bo'lib xabardor bo'ling.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="Elektron pochtangiz..." required aria-label="Email">
+                    <button type="submit" class="btn btn-primary" aria-label="Obuna bo'lish"><i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2026 WoodCraft Luxury Furniture. Barcha huquqlar himoyalangan.</p>
+            <div class="payment-badges">
+                <span><i class="fa-solid fa-credit-card"></i> Click</span>
+                <span><i class="fa-solid fa-wallet"></i> Payme</span>
+                <span><i class="fa-solid fa-money-bill-wave"></i> Naqd pul</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay Backdrops -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Slide-over Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Savatcha (<span id="cartDrawerCount">0</span>)</h3>
+            <button class="close-drawer-btn" id="closeCartBtn" aria-label="Yopish"><i
+                    class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="free-shipping-bar-container">
+            <div class="shipping-info-text" id="shippingProgressText">
+                Bepul yetkazish uchun yana <span>5,000,000 UZS</span> xarid qiling!
+            </div>
+            <div class="shipping-progress-track">
+                <div class="shipping-progress-fill" id="shippingProgressFill" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div class="drawer-body" id="cartDrawerItems">
+            <!-- Dynamic Cart Items via app.js -->
+        </div>
+
+        <div class="drawer-footer">
+            <!-- Promo Code Input -->
+            <div class="promo-code-box">
+                <input type="text" id="promoInput" placeholder="Promokod (masalan: MEBEL10)">
+                <button type="button" class="btn btn-secondary" id="applyPromoBtn">Qo'llash</button>
+            </div>
+            <div id="promoMessage" class="promo-message"></div>
+
+            <div class="summary-breakdown">
+                <div class="summary-row">
+                    <span>Mahsulotlar summali:</span>
+                    <span id="cartSubtotalDisplay">0 UZS</span>
+                </div>
+                <div class="summary-row" id="promoDiscountRow" style="display: none;">
+                    <span>Promokod chegirmasi:</span>
+                    <span class="discount-val" id="cartDiscountDisplay">-0 UZS</span>
+                </div>
+                <div class="summary-row">
+                    <span>Yetkazib berish:</span>
+                    <span id="cartDeliveryDisplay">Bepul</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Jami to'lov:</span>
+                    <span id="cartGrandTotalDisplay">0 UZS</span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-block checkout-trigger-btn" id="openCheckoutBtn">
+                <i class="fa-solid fa-lock"></i> Buyurtmani Rasmiylashtirish
+            </button>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal Drawer -->
+    <div class="cart-drawer wishlist-drawer" id="wishlistDrawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-heart" style="color: var(--rose);"></i> Sevimlilar Ro'yxati (<span
+                    id="wishlistDrawerCount">0</span>)</h3>
+            <button class="close-drawer-btn" id="closeWishlistBtn" aria-label="Yopish"><i
+                    class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="drawer-body" id="wishlistDrawerItems">
+            <!-- Dynamic Wishlist Items via app.js -->
+        </div>
+    </div>
+
+    <!-- Quick View Product Modal -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-card quickview-modal-card">
+            <button class="close-modal-btn" id="closeQuickViewBtn" aria-label="Yopish"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="quickview-body" id="quickViewContent">
+                <!-- Populated dynamically via app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-card checkout-modal-card">
+            <button class="close-modal-btn" id="closeCheckoutBtn" aria-label="Yopish"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="checkout-header">
+                <h2><i class="fa-solid fa-clipboard-check"></i> Buyurtmani Rasmiylashtirish</h2>
+                <p>Ma'lumotlaringizni kiriting va to'lov turini tanlang</p>
+            </div>
+
+            <form id="checkoutForm" class="checkout-form">
+                <div class="checkout-grid">
+                    <div class="form-section">
+                        <h4>1. Shaxsiy Ma'lumotlar</h4>
+                        <div class="form-group">
+                            <label for="custName">Ism va Familiyangiz *</label>
+                            <input type="text" id="custName" placeholder="Masalan: Alisher Navoiy" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="custPhone">Telefon raqamingiz *</label>
+                            <input type="tel" id="custPhone" placeholder="+998 (90) 123-45-67" required value="+998 ">
+                        </div>
+                        <div class="form-group">
+                            <label for="custAddress">Yetkazib berish manzili *</label>
+                            <textarea id="custAddress" rows="2"
+                                placeholder="Shahar, tuman, ko'cha, uy raqami va mo'ljal..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="custNote">Izoh / Qo'shimcha istaklar</label>
+                            <input type="text" id="custNote" placeholder="Masalan: Domofon kodi, etaj...">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>2. To'lov Usulini Tanlang</h4>
+                        <div class="payment-methods-grid">
+                            <label class="payment-card active">
+                                <input type="radio" name="paymentMethod" value="cash" checked>
+                                <div class="payment-card-content">
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                    <span>Naqd Pul</span>
+                                    <small>Yetkazib berilganda</small>
+                                </div>
+                            </label>
+                            <label class="payment-card">
+                                <input type="radio" name="paymentMethod" value="click">
+                                <div class="payment-card-content">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                    <span>Click</span>
+                                    <small>Ilova orqali online</small>
+                                </div>
+                            </label>
+                            <label class="payment-card">
+                                <input type="radio" name="paymentMethod" value="payme">
+                                <div class="payment-card-content">
+                                    <i class="fa-solid fa-wallet"></i>
+                                    <span>Payme</span>
+                                    <small>Ilova orqali online</small>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="order-summary-box">
+                            <h4>Buyurtma Xulosasi</h4>
+                            <div class="summary-row">
+                                <span>Mahsulotlar soni:</span>
+                                <strong id="checkoutItemsCount">0 ta</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Jami summa:</span>
+                                <strong class="total-price-tag" id="checkoutGrandTotal">0 UZS</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-actions">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitOrderBtn">
+                        <i class="fa-solid fa-check-double"></i> Buyurtmani Tasdiqlash
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Success Receipt Modal -->
+    <div class="modal-overlay" id="orderSuccessModal">
+        <div class="modal-card receipt-modal-card">
+            <div class="receipt-success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Buyurtmangiz Qabul Qilindi!</h2>
+            <p>Rahmat! Sizning buyurtmangiz muvaffaqiyatli rasmiylashtirildi. Operatorimiz tez orada siz bilan
+                bog'lanadi.</p>
+
+            <div class="receipt-details-box" id="receiptDetailsContent">
+                <!-- Dynamic Receipt Content -->
+            </div>
+
+            <div class="receipt-actions">
+                <button class="btn btn-primary"
+                    onclick="document.getElementById('orderSuccessModal').classList.remove('active'); document.getElementById('drawerBackdrop').classList.remove('active');">
+                    <i class="fa-solid fa-shop"></i> Xaridni Davom Ettirish
+                </button>
+                <button class="btn btn-outline" id="viewOrderHistoryBtn">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Buyurtmalar Tarixi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order History Modal -->
+    <div class="modal-overlay" id="orderHistoryModal">
+        <div class="modal-card history-modal-card">
+            <button class="close-modal-btn" id="closeHistoryBtn" aria-label="Yopish"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="history-header">
+                <h2><i class="fa-solid fa-clock-rotate-left"></i> Mening Buyurtmalarim Tarixi</h2>
+                <p>Siz tomoningizdan rasmiylashtirilgan barcha buyurtmalar ro'yxati</p>
+            </div>
+
+            <div class="history-body" id="orderHistoryContent">
+                <!-- Dynamic Order History List -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Main JavaScript File -->
+    <script src="app.js"></script>
+</body>
+
+</html>
